@@ -1,0 +1,31 @@
+import { CategoryWhereUniqueInput } from "../category/CategoryWhereUniqueInput";
+import { CompanyWhereUniqueInput } from "../company/CompanyWhereUniqueInput";
+import { CustomerProductPriceUpdateManyWithoutProductsInput } from "./CustomerProductPriceUpdateManyWithoutProductsInput";
+import { DemandListItemUpdateManyWithoutProductsInput } from "./DemandListItemUpdateManyWithoutProductsInput";
+import { OrderItemUpdateManyWithoutProductsInput } from "./OrderItemUpdateManyWithoutProductsInput";
+import { PurchaseItemUpdateManyWithoutProductsInput } from "./PurchaseItemUpdateManyWithoutProductsInput";
+import { SupplierProductUpdateManyWithoutProductsInput } from "./SupplierProductUpdateManyWithoutProductsInput";
+import { TagsOnProductUpdateManyWithoutProductsInput } from "./TagsOnProductUpdateManyWithoutProductsInput";
+
+export type ProductUpdateInput = {
+  category?: CategoryWhereUniqueInput;
+  company?: CompanyWhereUniqueInput;
+  customerPrices?: CustomerProductPriceUpdateManyWithoutProductsInput;
+  demandListItem?: DemandListItemUpdateManyWithoutProductsInput;
+  description?: string | null;
+  expiryDate?: Date | null;
+  name?: string;
+  orderItems?: OrderItemUpdateManyWithoutProductsInput;
+  purchaseItem?: PurchaseItemUpdateManyWithoutProductsInput;
+  purchasePrice?: number;
+  reorderLevel?: number | null;
+  retailPrice?: number | null;
+  sellPrice?: number;
+  size?: string | null;
+  sku?: string;
+  stockQuantity?: number;
+  supplierProducts?: SupplierProductUpdateManyWithoutProductsInput;
+  tags?: TagsOnProductUpdateManyWithoutProductsInput;
+  weight?: number | null;
+  weightUnit?: "G" | "ML" | "KG" | "L" | null;
+};
